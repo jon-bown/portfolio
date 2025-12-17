@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     title: "Code Rank",
     description: "Google DeepMind Hackathon Project",
     category: Category.Apps,
-    link: "https://www.kaggle.com/competitions/gemini-3/writeups/code-rank-ai-gamified-learning-experience$0",
+    link: "https://www.kaggle.com/competitions/gemini-3/writeups/code-rank-ai-gamified-learning-experience",
     githubLink: "https://github.com/jon-bown/code-rank",
     imageUrl: "https://img.youtube.com/vi/KiwMM6cMxVI/maxresdefault.jpg"
   },
@@ -47,8 +47,8 @@ export const PROJECTS: Project[] = [
     title: "Databricks Certified Generative AI Engineer Associate",
     description: "Asseses an individual’s ability to design and implement LLM-enabled solutions using Databricks.",
     category: Category.Certifications,
-    link: "https://credentials.databricks.com/5b59a018-904b-45b7-b9d9-c604995bc987#acc.I83XhPfF$0",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84uCXz1RviFLTEGfl0gahVbwue0MT1f2tZA&s$0",
+    link: "https://credentials.databricks.com/5b59a018-904b-45b7-b9d9-c604995bc987#acc.I83XhPfF",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84uCXz1RviFLTEGfl0gahVbwue0MT1f2tZA&s",
     badge: "Specialty"
   },
   {
@@ -73,7 +73,7 @@ export const PROJECTS: Project[] = [
     title: "Conversion Rate Quality",
     description: "Structural Change Point Testing with Application to Stock Returns (Applied).",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/Conversion_rate_qual_summary.pdf$0",
+    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/Conversion_rate_qual_summary.pdf",
     imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/distribution.png?raw=true"
   },
   {
@@ -100,15 +100,15 @@ export const PROJECTS: Project[] = [
     category: Category.Mathematics,
     link: "https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20",
     githubLink: "https://github.com/jon-bown/euclid",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/euclid.png?raw=true$0"
+    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/euclid.png?raw=true"
   },
   {
     id: 'math-6',
     title: "Credit Risk Similarity",
     description: "Exploration of Fannie Mae Credit Data.",
     category: Category.Mathematics,
-    link: "/pages/cr_similarity.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/crs.png?raw=true$0"
+    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/cr_similarity.pdf",
+    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/crs.png?raw=true"
   },
   {
     id: 'math-7',
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     description: "Analysis of rare event in the card game The Great Dalmuti.",
     category: Category.Mathematics,
     link: "https://github.com/jon-bown/dalmuti",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/dalmuti.png?raw=true$0"
+    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/dalmuti.png?raw=true"
   },
   {
     id: 'math-8',
@@ -125,7 +125,15 @@ export const PROJECTS: Project[] = [
     category: Category.Mathematics,
     link: "/pages/gt_spiderman.pdf",
     githubLink: "https://github.com/jon-bown/game-theory-spider-man",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/disney_sony.jpg?raw=true$0"
+    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/disney_sony.jpg?raw=true"
+  },
+  {
+    id: 'math-8',
+    title: "Fowl Play",
+    description: "The math behind the Chick-fil-a NBA free throw promotion.",
+    category: Category.Mathematics,
+    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/fowl-play.pdf",
+    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/free_throw.jpg?raw=true"
   },
   // Machine Learning
   {
@@ -143,7 +151,7 @@ export const PROJECTS: Project[] = [
     title: "Constrained Language Learning",
     description: "Feedback Prize: Kaggle Competition Methodology.",
     category: Category.MachineLearning,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/feedback_prize_final_report.pdf$0",
+    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/feedback_prize_final_report.pdf",
     imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/pca-cll.png?raw=true"
   },
   // Datasets
