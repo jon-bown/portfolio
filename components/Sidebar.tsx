@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   User, LayoutGrid, Sigma, BrainCircuit, Database, FileCode, Smartphone, GitBranch, Rss,
-  ChevronsLeft, ChevronsRight, Presentation, Award, Sun, Moon
+  ChevronsLeft, ChevronsRight, Presentation, Award, Sun, Moon, Mail
 } from 'lucide-react';
 import { PROFILE } from '../constants';
 import { Category } from '../types';
@@ -134,6 +134,22 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, onToggle, activeTab, onSe
         transition-all duration-300
         ${isExpanded ? 'px-4 py-4' : 'px-0 py-4'}
       `}>
+          {/* Contact Me Button */}
+          <a
+            href={PROFILE.links.email}
+            className={`
+                flex items-center justify-center rounded-lg transition-all duration-200 
+                bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/20 mb-3
+                ${isExpanded ? 'w-full py-2.5 gap-3' : 'w-10 h-10 mx-auto'}
+            `}
+            title="Contact Me"
+          >
+              <Mail size={18} />
+              {isExpanded && (
+                  <span className="text-sm font-bold">Contact Me</span>
+              )}
+          </a>
+
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
