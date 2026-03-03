@@ -2,7 +2,7 @@ import { Category, Project } from './types';
 
 export const PROFILE = {
   name: "Jonathan Bown",
-  title: "Principal Machine Learning Engineer",
+  title: "Machine Learning Engineer",
   company: "WGU",
   location: "North Carolina, USA",
   bio: "Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
@@ -22,6 +22,16 @@ export const PROFILE = {
 };
 
 export const PROJECTS: Project[] = [
+
+    {
+    id: 'blog-mlflow-1',
+    title: "Practical AgentOps: Getting Started with MLflow 3",
+    description: "Open Data Science Conference Workshop Preview",
+    category: Category.Blog,
+    link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
+    imageUrl: "https://opendatascience.com/wp-content/uploads/2026/02/blog-logo-640x300.png"
+  },
+
     {
     id: 'app-5',
     title: "Code Rank",
@@ -49,7 +59,6 @@ export const PROJECTS: Project[] = [
     category: Category.Certifications,
     link: "https://credentials.databricks.com/5b59a018-904b-45b7-b9d9-c604995bc987#acc.I83XhPfF",
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84uCXz1RviFLTEGfl0gahVbwue0MT1f2tZA&s",
-    badge: "Specialty"
   },
   {
     id: 'cert-3',
@@ -128,7 +137,7 @@ export const PROJECTS: Project[] = [
     imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/disney_sony.jpg?raw=true"
   },
   {
-    id: 'math-8',
+    id: 'math-9',
     title: "Fowl Play",
     description: "The math behind the Chick-fil-a NBA free throw promotion.",
     category: Category.Mathematics,
@@ -261,7 +270,7 @@ export const PROJECTS: Project[] = [
     description: "Instructions for scraping box office data using Python.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/web-scraping-box-office-data-with-python",
-    imageUrl: "https://picsum.photos/seed/scrape/400/300"
+    imageUrl: "https://www.parsehub.com/blog/content/images/2021/06/what-is-web-sraping-parsehub.jpeg"
   },
   {
     id: 'nb-8',

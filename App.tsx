@@ -144,7 +144,7 @@ const App: React.FC = () => {
         <header className="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 px-6 py-6 lg:px-10 flex items-center justify-between transition-colors duration-300">
             <div>
                 <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">{getPageTitle()}</h1>
-                <p className="text-sm text-slate-500 mt-1">Jonathan Bown Portfolio</p>
+                <p className="text-sm text-slate-500 mt-1">Jonathan Bown's Portfolio</p>
             </div>
         </header>
 
