@@ -29,7 +29,8 @@ export const PROJECTS: Project[] = [
     description: "Open Data Science Conference Workshop Preview",
     category: Category.Blog,
     link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
-    imageUrl: "https://opendatascience.com/wp-content/uploads/2026/02/blog-logo-640x300.png"
+    imageUrl: "https://opendatascience.com/wp-content/uploads/2026/02/blog-logo-640x300.png",
+    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
   },
 
     {
