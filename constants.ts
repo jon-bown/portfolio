@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     title: "Practical AgentOps: From PoC to Prod with MLflow 3",
     description: "Open Data Science Conference Workshop Preview",
     category: Category.Presentations,
-    link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
+    link: "https://github.com/jon-bown/practical-agent-ops-mlflow3",
     imageUrl: "./odsc_speaker_profile.png",
     githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
   },
@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     category: Category.Apps,
     link: "https://www.kaggle.com/competitions/gemini-3/writeups/code-rank-ai-gamified-learning-experience",
     githubLink: "https://github.com/jon-bown/code-rank",
-    imageUrl: "https://img.youtube.com/vi/KiwMM6cMxVI/maxresdefault.jpg"
+    imageUrl: "./code_rank.png",
   },
   // Presentations
   {
