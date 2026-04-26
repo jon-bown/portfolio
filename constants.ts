@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     description: "Open Data Science Conference Workshop Preview",
     category: Category.Presentations,
     link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
-    imageUrl: "./odsc-speaker-card-2026.png",
+    imageUrl: "./odsc_speaker_profile.png",
     githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
   },
 
