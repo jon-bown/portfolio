@@ -5,7 +5,7 @@ export const PROFILE = {
   title: "Machine Learning Engineer",
   company: "WGU",
   location: "North Carolina, USA",
-  bio: "Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
+  bio: "Principal Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
   education: [
     "Masters of Science, Computer Science, UT Austin (2023)",
     "Masters of Statistics, University of Utah (2019)",
@@ -22,6 +22,16 @@ export const PROFILE = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'blog-mlflow-1',
+    title: "Practical AgentOps: From PoC to Prod with MLflow 3",
+    description: "Open Data Science Conference Workshop Preview",
+    category: Category.Presentations,
+    link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
+    imageUrl: "./odsc-speaker-card-2026.png",
+    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
+  },
+
 
     {
     id: 'blog-mlflow-1',
