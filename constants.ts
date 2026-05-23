@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     description: "Open Data Science Conference Workshop Preview",
     category: Category.Presentations,
     link: "https://github.com/jon-bown/practical-agent-ops-mlflow3",
-    imageUrl: "./odsc_speaker_profile.png",
+    imageUrl: "./images/odsc_speaker_profile.png",
     githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
   },
 
@@ -161,7 +161,7 @@ export const PROJECTS: Project[] = [
     title: "Adversarial Super Bowl",
     description: "Improving QA ability of ELECTRA-small with adversarial data.",
     category: Category.MachineLearning,
-    link: "./adversarial_super_bowl.pdf",
+    link: "./papers/adversarial_super_bowl.pdf",
     kaggleLink: "https://www.kaggle.com/datasets/jonbown/adv-qa",
     githubLink: "https://github.com/jon-bown/nlp-utaustin-FA23/blob/main/final-nlp-project.ipynb",
     imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/v2_before-sqadv.png?raw=true"
