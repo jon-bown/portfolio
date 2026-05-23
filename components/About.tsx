@@ -1,6 +1,8 @@
 import React from 'react';
 import { PROFILE } from '../constants';
-import { FileText, GraduationCap, MapPin, Github, Linkedin, Database, Mail } from 'lucide-react';
+import { FileText, GraduationCap, MapPin, Linkedin, Mail } from 'lucide-react';
+import KaggleIcon from './KaggleIcon';
+import GithubIcon from './GithubIcon';
 
 const About: React.FC = () => {
   return (
@@ -40,9 +42,9 @@ const About: React.FC = () => {
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <SocialCard href={PROFILE.links.github} icon={<Github />} label="GitHub" value="Jon-bown" />
+            <SocialCard href={PROFILE.links.github} icon={<GithubIcon />} label="GitHub" value="Jon-bown" />
             <SocialCard href={PROFILE.links.linkedin} icon={<Linkedin />} label="LinkedIn" value="Jonathan Bown" />
-            <SocialCard href={PROFILE.links.kaggle} icon={<Database />} label="Kaggle" value="jonbown" />
+            <SocialCard href={PROFILE.links.kaggle} icon={<KaggleIcon />} label="Kaggle" value="jonbown" />
             <SocialCard href={PROFILE.links.medium} icon={<span className="font-serif font-bold text-xl leading-none">M</span>} label="Medium" value="@jonbown" />
             <SocialCard href={PROFILE.links.email} icon={<Mail />} label="Email" value="Contact Me" />
         </div>
