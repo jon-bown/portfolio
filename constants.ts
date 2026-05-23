@@ -93,25 +93,25 @@ export const PROJECTS: Project[] = [
     title: "Conversion Rate Quality",
     description: "Structural Change Point Testing with Application to Stock Returns (Applied).",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/Conversion_rate_qual_summary.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/distribution.png?raw=true"
+    link: "./papers/Conversion_rate_qual_summary.pdf",
+    imageUrl: "./images/distribution.png?raw=true"
   },
   {
     id: 'math-3',
     title: "NBA Player Evaluations",
     description: "Utah Jazz trade evaluations using sports economics.",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/NBA_Player_Valuations_2019.pdf",
+    link: "./papers/NBA_Player_Valuations_2019.pdf",
     githubLink: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/NBA_Player_Valuations_2019.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/Utah_Jazz_Logo.png?raw=true"
+    imageUrl: "./images/Utah_Jazz_Logo.png?raw=true"
   },
   {
     id: 'math-4',
     title: "NBA Player Metrics",
     description: "Comparison of different sports economics metrics for player comparison.",
     category: Category.Mathematics,
-    link: "./pages/source/NBA_Player_Valuations_2019.html",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/nba_logo.jpg?raw=true"
+    link: "./papers/NBA_Player_Valuations_2019.html",
+    imageUrl: "./images/nba_logo.jpg?raw=true"
   },
   {
     id: 'math-5',
@@ -120,15 +120,15 @@ export const PROJECTS: Project[] = [
     category: Category.Mathematics,
     link: "https://www.kaggle.com/code/jonbown/euclid-s-elements-book-1-props-1-20",
     githubLink: "https://github.com/jon-bown/euclid",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/euclid.png?raw=true"
+    imageUrl: "./images/thumbs/euclid.png?raw=true"
   },
   {
     id: 'math-6',
     title: "Credit Risk Similarity",
     description: "Exploration of Fannie Mae Credit Data.",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/cr_similarity.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/crs.png?raw=true"
+    link: "./papers/cr_similarity.pdf",
+    imageUrl: "./images/crs.png?raw=true"
   },
   {
     id: 'math-7',
@@ -136,7 +136,7 @@ export const PROJECTS: Project[] = [
     description: "Analysis of rare event in the card game The Great Dalmuti.",
     category: Category.Mathematics,
     link: "https://github.com/jon-bown/dalmuti",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/dalmuti.png?raw=true"
+    imageUrl: "./images/thumbs/dalmuti.png?raw=true"
   },
   {
     id: 'math-8',
@@ -145,15 +145,15 @@ export const PROJECTS: Project[] = [
     category: Category.Mathematics,
     link: "/pages/gt_spiderman.pdf",
     githubLink: "https://github.com/jon-bown/game-theory-spider-man",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/disney_sony.jpg?raw=true"
+    imageUrl: "./images/disney_sony.jpg?raw=true"
   },
   {
     id: 'math-9',
     title: "Fowl Play",
     description: "The math behind the Chick-fil-a NBA free throw promotion.",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/fowl-play.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/free_throw.jpg?raw=true"
+    link: "./papers/fowl-play.pdf",
+    imageUrl: "./images/free_throw.jpg?raw=true"
   },
   // Machine Learning
   {
@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
     link: "./papers/adversarial_super_bowl.pdf",
     kaggleLink: "https://www.kaggle.com/datasets/jonbown/adv-qa",
     githubLink: "https://github.com/jon-bown/nlp-utaustin-FA23/blob/main/final-nlp-project.ipynb",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/v2_before-sqadv.png?raw=true"
+    imageUrl: "./images/thumbs/v2_before-sqadv.png?raw=true"
   },
   {
     id: 'ml-2',
@@ -172,7 +172,7 @@ export const PROJECTS: Project[] = [
     description: "Feedback Prize: Kaggle Competition Methodology.",
     category: Category.MachineLearning,
     link: "./papers/feedback_prize_final_report.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/pca-cll.png?raw=true"
+    imageUrl: "./images/thumbs/pca-cll.png?raw=true"
   },
   // Datasets
   {
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
     description: "Balanced Adversarial Dataset for Question-Answer LLMs.",
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/adv-qa",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/qa-cover.jpg?raw=true"
+    imageUrl: "./images/thumbs/qa-cover.jpg?raw=true"
   },
   {
     id: 'ds-2',
@@ -190,7 +190,7 @@ export const PROJECTS: Project[] = [
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/metallica-songs",
     githubLink: "https://github.com/jon-bown/metallica",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/72-seasons.jpg?raw=true"
+    imageUrl: "./images/thumbs/72-seasons.jpg?raw=true"
   },
   {
     id: 'ds-3',
@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/simpsons-episodes-2016",
     githubLink: "https://github.com/jon-bown/simpsons",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/simpsons.jpg?raw=true"
+    imageUrl: "./images/thumbs/simpsons.jpg?raw=true"
   },
   {
     id: 'ds-4',
@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
     description: "Screen time data for MCU characters.",
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/marvel-screen-time",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/marvel.jpg?raw=true"
+    imageUrl: "./images/thumbs/marvel.jpg?raw=true"
   },
   {
     id: 'ds-5',
@@ -215,7 +215,7 @@ export const PROJECTS: Project[] = [
     description: "Dataset of popular Christmas movies.",
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/christmas-movies",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/christmas.jpg?raw=true"
+    imageUrl: "./images/thumbs/christmas.jpg?raw=true"
   },
   {
     id: 'ds-6',
@@ -223,7 +223,7 @@ export const PROJECTS: Project[] = [
     description: "Station usage statistics from 2007-2017.",
     category: Category.Datasets,
     link: "https://www.kaggle.com/datasets/jonbown/london-tube-station-usage",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/london.png?raw=true"
+    imageUrl: "./images/thumbs/london.png?raw=true"
   },
   // Notebooks
   {
@@ -233,7 +233,7 @@ export const PROJECTS: Project[] = [
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/metallica-visualize-em-all",
     githubLink: "https://github.com/jon-bown/metallica",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/72-seasons.jpg?raw=true"
+    imageUrl: "./images/thumbs/72-seasons.jpg?raw=true"
   },
   {
     id: 'nb-2',
@@ -241,7 +241,7 @@ export const PROJECTS: Project[] = [
     description: "Formula 1 Post-Race Report Generator.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/formula-1-post-race-summary",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/F1-logo.png?raw=true"
+    imageUrl: "./images/thumbs/F1-logo.png?raw=true"
   },
   {
     id: 'nb-3',
@@ -249,7 +249,7 @@ export const PROJECTS: Project[] = [
     description: "Weekly summary of box office trends via web scraping.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/u-s-weekend-box-office-report",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/movie-theater-popcorn.jpg?raw=true"
+    imageUrl: "./images/thumbs/movie-theater-popcorn.jpg?raw=true"
   },
   {
     id: 'nb-4',
@@ -265,7 +265,7 @@ export const PROJECTS: Project[] = [
     description: "Testing claims about racial disparities in tech salaries.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/stem-income-disparity-does-it-exist",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/fulls/stem.png?raw=true"
+    imageUrl: "./images/fulls/stem.png?raw=true"
   },
   {
     id: 'nb-6',
@@ -273,7 +273,7 @@ export const PROJECTS: Project[] = [
     description: "Time Series Analysis of Utah Drought Data.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/forecasting-utah-drought-conditions",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/drought.jpg?raw=true"
+    imageUrl: "./images/thumbs/drought.jpg?raw=true"
   },
   {
     id: 'nb-7',
@@ -281,7 +281,7 @@ export const PROJECTS: Project[] = [
     description: "Instructions for scraping box office data using Python.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/web-scraping-box-office-data-with-python",
-    imageUrl: "https://www.parsehub.com/blog/content/images/2021/06/what-is-web-sraping-parsehub.jpeg"
+    imageUrl: "./images/thumbs/web-scraping.jpg?raw=true"
   },
   {
     id: 'nb-8',
@@ -289,7 +289,7 @@ export const PROJECTS: Project[] = [
     description: "Automated webscraping to build a Kaggle dataset on a scheduler.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/worldwide-box-office-data-generator",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/fulls/movie-theater-popcorn.jpg?raw=true"
+    imageUrl: "./images/fulls/movie-theater-popcorn.jpg?raw=true"
   },
   {
     id: 'nb-9',
@@ -297,7 +297,7 @@ export const PROJECTS: Project[] = [
     description: "Quickly test features for ML competitions.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/feature-testing-pipeline-ps-s3e13",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/feature_test_pipe.png?raw=true"
+    imageUrl: "./images/feature_test_pipe.png?raw=true"
   },
   {
     id: 'nb-10',
@@ -305,7 +305,7 @@ export const PROJECTS: Project[] = [
     description: "Comparing complexity of different linear regression approaches.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/comparing-linear-regression-algorithms",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/lin_reg.png?raw=true"
+    imageUrl: "./images/lin_reg.png?raw=true"
   },
   // Apps
   {
@@ -314,7 +314,7 @@ export const PROJECTS: Project[] = [
     description: "Custom Watchlists on Android.",
     category: Category.Apps,
     link: "https://github.com/jon-bown/watchlist",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/fulls/watchlist.png?raw=true"
+    imageUrl: "./images/fulls/watchlist.png?raw=true"
   },
   {
     id: 'app-2',
@@ -322,7 +322,7 @@ export const PROJECTS: Project[] = [
     description: "iOS Game built with Unity.",
     category: Category.Apps,
     link: "https://apps.apple.com/us/app/beach-ball-runner/id1514274329",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/fulls/beach.png?raw=true"
+    imageUrl: "./images/fulls/beach.png?raw=true"
   },
   {
     id: 'app-3',
@@ -330,7 +330,7 @@ export const PROJECTS: Project[] = [
     description: "False Positive Calculator on iOS.",
     category: Category.Apps,
     link: "https://apps.apple.com/us/app/beach-ball-runner/id1514274329", // Link from original source seems duplicated but kept
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/false_positive.png?raw=true"
+    imageUrl: "./images/false_positive.png?raw=true"
   },
   {
     id: 'app-4',
@@ -338,7 +338,7 @@ export const PROJECTS: Project[] = [
     description: "iOS Productivity App.",
     category: Category.Apps,
     link: "https://testflight.apple.com/join/r5LJoIFd",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/minutes_logo.png?raw=true",
+    imageUrl: "./images/minutes_logo.png?raw=true",
     badge: "Beta"
   },
   // Repos
@@ -348,6 +348,6 @@ export const PROJECTS: Project[] = [
     description: "Everything you need to build Kaggle dataset pipelines.",
     category: Category.Repos,
     link: "https://github.com/jon-bown/kaggle-data-pipeline",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/fulls/kdp.jpg?raw=true"
+    imageUrl: "./images/fulls/kdp.jpg?raw=true"
   }
 ];
