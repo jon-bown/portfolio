@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     category: Category.Apps,
     link: "https://www.kaggle.com/competitions/gemini-3/writeups/code-rank-ai-gamified-learning-experience",
     githubLink: "https://github.com/jon-bown/code-rank",
-    imageUrl: "./code_rank.png",
+    imageUrl: "./images/code_rank.png",
   },
   // Presentations
   {
@@ -85,8 +85,8 @@ export const PROJECTS: Project[] = [
     title: "Masters Thesis",
     description: "Structural Change Point Testing with Application to Stock Returns.",
     category: Category.Mathematics,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/Structural_Change_Points_bown_2019.pdf",
-    imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/GPRO_price_stoptime.png?raw=true"
+    link: "./papers/Structural_Change_Points_bown_2019.pdf",
+    imageUrl: "./images/GPRO_price_stoptime.png?raw=true"
   },
   {
     id: 'math-2',
@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
     title: "Constrained Language Learning",
     description: "Feedback Prize: Kaggle Competition Methodology.",
     category: Category.MachineLearning,
-    link: "https://github.com/jon-bown/jon-bown.github.io/blob/main/pages/source/feedback_prize_final_report.pdf",
+    link: "./papers/feedback_prize_final_report.pdf",
     imageUrl: "https://github.com/jon-bown/jon-bown.github.io/blob/main/images/thumbs/pca-cll.png?raw=true"
   },
   // Datasets
