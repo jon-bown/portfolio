@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     category: Category.Apps,
     link: "https://www.kaggle.com/competitions/gemini-3/writeups/code-rank-ai-gamified-learning-experience",
     githubLink: "https://github.com/jon-bown/code-rank",
-    imageUrl: "./images/code_rank.png",
+    imageUrl: "./images/code_rank.png?raw=true",
   },
   // Presentations
   {
