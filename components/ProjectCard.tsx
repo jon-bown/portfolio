@@ -44,8 +44,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-1 relative">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-          {project.title}
+        <h3 className="text-lg font-bold mb-2 line-clamp-1">
+          {hasDirectLink ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-900 dark:text-slate-100 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            >
+              {project.title}
+            </a>
+          ) : (
+            <span className="text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+              {project.title}
+            </span>
+          )}
         </h3>
         <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
           {project.description}
