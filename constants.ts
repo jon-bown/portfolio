@@ -249,7 +249,7 @@ export const PROJECTS: Project[] = [
     description: "Weekly summary of box office trends via web scraping.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/u-s-weekend-box-office-report",
-    imageUrl: "./images/thumbs/movie-theater-popcorn.jpg?raw=true"
+    imageUrl: "./images/thumbs/movie-theater-popcorn.jpg"
   },
   {
     id: 'nb-4',
@@ -281,7 +281,7 @@ export const PROJECTS: Project[] = [
     description: "Instructions for scraping box office data using Python.",
     category: Category.Notebooks,
     link: "https://www.kaggle.com/code/jonbown/web-scraping-box-office-data-with-python",
-    imageUrl: "./images/thumbs/web-scraping.jpg?raw=true"
+    imageUrl: "./images/web-scrape.png?raw=true"
   },
   {
     id: 'nb-8',
