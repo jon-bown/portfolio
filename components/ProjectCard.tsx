@@ -7,6 +7,17 @@ interface ProjectCardProps {
   project: Project;
 }
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// Formats 'YYYY-MM' as 'Jun 2024' and 'YYYY-MM-DD' as 'Jul 7, 2026'.
+// Parsed by hand so the date never shifts a day across timezones.
+const formatDate = (date: string): string => {
+  const [year, month, day] = date.split('-');
+  const label = MONTHS[Number(month) - 1];
+  if (!year || !label) return date;
+  return day ? `${label} ${Number(day)}, ${year}` : `${label} ${year}`;
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const hasGithub = !!project.githubLink;
   const hasKaggle = !!project.kaggleLink;
@@ -36,6 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           src={project.imageUrl}
           alt={project.title}
           loading="lazy"
+          style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
         />
         {/* Overlay Gradient */}
@@ -65,7 +77,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         {/* Actions */}
         <div className="relative z-20 flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-800 mt-auto">
-          <div className="flex-1"></div>
+          <div className="flex-1">
+            {project.date && (
+              <time dateTime={project.date} className="text-xs text-slate-400 dark:text-slate-500">
+                {formatDate(project.date)}
+              </time>
+            )}
+          </div>
 
           {hasGithub && (
             <a

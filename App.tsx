@@ -73,9 +73,14 @@ const App: React.FC = () => {
         ? PROJECTS 
         : PROJECTS.filter(p => p.category === activeTab);
 
+    // Media is shown newest first; undated items fall to the end, keeping their listed order.
+    const visibleProjects = activeTab === Category.Media
+        ? [...filteredProjects].sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
+        : filteredProjects;
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 animate-fadeIn">
-            {filteredProjects.map((project) => (
+            {visibleProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
             ))}
             

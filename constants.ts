@@ -2,10 +2,10 @@ import { Category, Project } from './types';
 
 export const PROFILE = {
   name: "Jonathan Bown",
-  title: "Machine Learning Engineer",
+  title: "AI Engineer",
   company: "WGU",
   location: "North Carolina, USA",
-  bio: "Principal Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
+  bio: "Principal AI/Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
   education: [
     "Masters of Science, Computer Science, UT Austin (2023)",
     "Masters of Statistics, University of Utah (2019)",
@@ -23,17 +23,16 @@ export const PROFILE = {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'blog-mlflow-1',
+    id: 'media-odsc-east-2026',
     title: "Practical AgentOps: From PoC to Prod with MLflow 3",
     description: "Open Data Science Conference Workshop Preview",
-    category: Category.Presentations,
+    category: Category.Media,
     link: "https://github.com/jon-bown/practical-agent-ops-mlflow3",
     imageUrl: "./images/odsc_speaker_profile.png",
-    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
+    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3",
+    date: "2026-03"
   },
-
-
-    {
+  {
     id: 'blog-mlflow-1',
     title: "Practical AgentOps: Getting Started with MLflow 3",
     description: "Open Data Science Conference Workshop Preview",
@@ -52,15 +51,47 @@ export const PROJECTS: Project[] = [
     githubLink: "https://github.com/jon-bown/code-rank",
     imageUrl: "./images/code_rank.png?raw=true",
   },
-  // Presentations
+  // Media
+  {
+    id: 'media-odsc-west-2026',
+    title: "ODSC AI West 2026",
+    description: "Upcoming appearance - Hyatt Regency SFO, October 27-28, 2026.",
+    category: Category.Media,
+    link: "https://odsc.ai/west/",
+    imageUrl: "https://odsc.ai/wp-content/uploads/2026/02/odscai_west2026.jpg",
+    badge: "Upcoming",
+    date: "2026-10-27"
+  },
+  {
+    id: 'media-podcast-1',
+    title: "Skills, Context, and Trust: The New Agentic Coding Stack",
+    description: "Guest - Agents + Engineers Podcast, Episode 006",
+    category: Category.Media,
+    link: "https://agentsandengineers.com/episodes/0006-skills-context-and-trust-the-new-agentic-coding-stack/",
+    imageUrl: "https://agentsandengineers.com/og-default.png",
+    badge: "Podcast",
+    date: "2026-07-07"
+  },
+  {
+    id: 'media-mlflow-ambassador',
+    title: "MLflow Ambassador",
+    description: "Selected for the MLflow Ambassador program, supporting the community through talks, writing, and open source contributions.",
+    category: Category.Media,
+    link: "https://mlflow.org/ambassadors/",
+    imageUrl: "https://mlflow.org/img/ambassadors/JonathanBown.jpg",
+    imagePosition: "50% 25%",
+    badge: "Ambassador",
+    date: "2026-08"
+  },
   {
     id: 'pres-1',
     title: "The MLOps Platform at WGU",
     description: "Co-Presenter - Databricks Data + AI Summit 2024",
-    category: Category.Presentations,
+    category: Category.Media,
     link: "https://youtu.be/15p8g09Rt-E?si=i_djW5SnZjhVv8KT", 
     imageUrl: "https://img.youtube.com/vi/15p8g09Rt-E/maxresdefault.jpg",
-    badge: "Speaker"
+    badge: "Speaker",
+    date: "2024-06"
   },
   // Certifications
   {

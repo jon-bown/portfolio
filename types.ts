@@ -5,7 +5,7 @@ export enum Category {
   Notebooks = 'Notebooks',
   Apps = 'Apps',
   Repos = 'Repos',
-  Presentations = 'Presentations',
+  Media = 'Media',
   Certifications = 'Certifications',
   Blog = 'Blog' // Virtual category for the UI
 }
@@ -20,6 +20,10 @@ export interface Project {
   githubLink?: string;
   kaggleLink?: string;
   badge?: string;
+  /** ISO date, either 'YYYY-MM' or 'YYYY-MM-DD'. Used for sorting and display. */
+  date?: string;
+  /** CSS object-position for the card image, e.g. '50% 25%'. Defaults to centered. */
+  imagePosition?: string;
 }
 
 export interface BlogPost {

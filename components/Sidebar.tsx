@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   User, LayoutGrid, Sigma, BrainCircuit, Database, FileCode, Smartphone, GitBranch, Rss,
-  ChevronsLeft, ChevronsRight, Presentation, Award, Sun, Moon, Mail
+  ChevronsLeft, ChevronsRight, Mic, Award, Sun, Moon, Mail
 } from 'lucide-react';
 import { PROFILE } from '../constants';
 import { Category } from '../types';
@@ -23,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isExpanded, onToggle, activeTab, onSe
     { id: 'About', label: 'About Me', icon: User },
     { type: 'divider' },
     { id: 'All', label: 'All Projects', icon: LayoutGrid },
-    { id: Category.Presentations, label: 'Presentations', icon: Presentation },
+    { id: Category.Media, label: 'Media', icon: Mic },
     { id: Category.Certifications, label: 'Certifications', icon: Award },
     { id: Category.Mathematics, label: 'Mathematics', icon: Sigma },
     { id: Category.MachineLearning, label: 'Machine Learning', icon: BrainCircuit },
