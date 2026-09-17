@@ -3,13 +3,28 @@ import { Category, Project } from './types';
 export const PROFILE = {
   name: "Jonathan Bown",
   title: "AI Engineer",
+  headline: "Principal AI / Machine Learning Engineer",
   company: "WGU",
   location: "North Carolina, USA",
-  bio: "Principal AI/Machine Learning Engineer at WGU and recent MSCS graduate at UT Austin, with a broader background in Mathematics, Statistics, and Computer Science. Previous experience across various domains including banking, fintech, marketing, higher education, and sports. Machine Learning/AI competitor and enthusiast. Open source contributor. Proficient in Python, C#, SQL, Java, R, and other languages. Always eager to explore, learn, and share insights in the vast realm of science and technology.",
+  /** One-line summary used in the hero and page metadata. */
+  tagline: "Building ML & AI systems in higher education",
+  /** Rendered as separate paragraphs in the About section. */
+  bio: [
+  "I'm a Principal AI/Machine Learning Engineer at WGU, where I build a governed AI platform that serves both employees and students at scale, and bring CI/CD and software engineering discipline to data science and AI workflows. I hold an MSCS from UT Austin with a foundation in Mathematics, Statistics, and Computer Science, and I've worked across banking, fintech, marketing, higher education, and sports.",
+    "I'm an MLflow Ambassador (2026) and open source contributor, and I recently spoke at ODSC on AgentOps and evaluation-driven development, including a hands-on MLflow workshop at ODSC East 2026. I also contribute learning content and tutorials on the generative AI lifecycle with MLflow. I work in Python, C#, SQL, Java, and R, and I'm always looking for the next thing to learn, build, and share."
+  ],
   education: [
-    "Masters of Science, Computer Science, UT Austin (2023)",
-    "Masters of Statistics, University of Utah (2019)",
-    "Bachelors of Science in Mathematics, University of Utah (2018)"
+    { degree: "M.S. Computer Science", school: "The University of Texas at Austin", year: "2023" },
+    { degree: "M.S. Statistics", school: "University of Utah", year: "2019" },
+    { degree: "B.S. Mathematics", school: "University of Utah", year: "2018" }
+  ],
+  /** Short, factual highlights surfaced next to the bio. */
+  highlights: [
+    "MLflow Ambassador",
+    "ODSC AI conference speaker",
+    "Podcast Guest",
+    "Databricks Certified",
+    "Kaggle datasets & notebooks author"
   ],
   links: {
     kaggle: "https://www.kaggle.com/jonbown",
@@ -17,7 +32,8 @@ export const PROFILE = {
     medium: "https://medium.com/@jonbown",
     linkedin: "https://www.linkedin.com/in/jonathan-bown/",
     email: "mailto:Jonathan.k.bown@gmail.com",
-    hackerrank: "https://www.hackerrank.com/profile/jonvzw6"
+    hackerrank: "https://www.hackerrank.com/profile/jonvzw6",
+    blog: "https://jon-bown.github.io/blog"
   }
 };
 
@@ -94,6 +110,14 @@ export const PROJECTS: Project[] = [
     date: "2024-06"
   },
   // Certifications
+  {
+    id: 'cert-databricks-context-engineer',
+    title: "Databricks Certified Context Engineer Associate",
+    description: "Assesses an individual’s ability to design, assemble, and govern the context that AI agent systems receive at inference time using Databricks.",
+    category: Category.Certifications,
+    link: "https://credentials.databricks.com/df956e32-570c-4ecd-a745-db5503c7ab20#acc.9qFLtb5G",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84uCXz1RviFLTEGfl0gahVbwue0MT1f2tZA&s",
+  },
   {
     id: 'cert-1',
     title: "Databricks Certified Generative AI Engineer Associate",

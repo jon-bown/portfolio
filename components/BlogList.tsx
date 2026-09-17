@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { ArrowUpRight, Rss } from 'lucide-react';
 import { BlogPost } from '../types';
-import { Rss, Calendar, ChevronRight } from 'lucide-react';
+import { PROFILE } from '../constants';
+import { formatDate } from '../utils';
+
+const FEED_URL = 'https://jon-bown.github.io/blog/feed.xml';
+const MAX_POSTS = 5;
+
+/** Feed titles arrive with escaped entities (e.g. '&amp;'); render them as text. */
+const decodeEntities = (value: string): string =>
+  new DOMParser().parseFromString(value, 'text/html').documentElement.textContent ?? value;
 
 const BlogList: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -8,36 +17,40 @@ const BlogList: React.FC = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    // Attempt to fetch RSS feed.
-    fetch('https://jon-bown.github.io/blog/feed.xml')
-      .then(response => response.text())
-      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-      .then(data => {
-        const items = data.querySelectorAll('entry');
-        const feedPosts: BlogPost[] = [];
-        items.forEach((item, index) => {
-          if (index < 6) { // Limit to 6
-            const link = item.querySelector('link')?.getAttribute('href') || '#';
-            const title = item.querySelector('title')?.textContent || 'Untitled Post';
-            const pubDate = item.querySelector('published')?.textContent?.substring(0, 10);
-            feedPosts.push({ title, link, pubDate });
-          }
-        });
+    let cancelled = false;
+
+    fetch(FEED_URL)
+      .then((response) => response.text())
+      .then((str) => new window.DOMParser().parseFromString(str, 'text/xml'))
+      .then((data) => {
+        if (cancelled) return;
+        const feedPosts: BlogPost[] = Array.from(data.querySelectorAll('entry'))
+          .slice(0, MAX_POSTS)
+          .map((item) => ({
+            title: decodeEntities(item.querySelector('title')?.textContent || 'Untitled Post'),
+            link: item.querySelector('link')?.getAttribute('href') || '#',
+            pubDate: item.querySelector('published')?.textContent?.substring(0, 10),
+          }));
         setPosts(feedPosts);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Failed to fetch blog feed:", err);
+        if (cancelled) return;
+        console.error('Failed to fetch blog feed:', err);
         setError(true);
         setLoading(false);
       });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-pulse">
-        {[1, 2, 3, 4].map(i => (
-          <div key={i} className="h-32 bg-slate-200 dark:bg-slate-800 rounded-xl"></div>
+      <div className="animate-pulse space-y-px" aria-busy="true" aria-label="Loading recent posts">
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="h-16 border-b border-slate-200 dark:border-slate-800" />
         ))}
       </div>
     );
@@ -45,53 +58,46 @@ const BlogList: React.FC = () => {
 
   if (error || posts.length === 0) {
     return (
-      <div className="text-center py-12 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
-        <Rss className="mx-auto h-10 w-10 text-slate-400 dark:text-slate-600 mb-3" />
-        <p className="text-slate-500 dark:text-slate-400">Could not load recent blog posts.</p>
-        <a href="https://jon-bown.github.io/blog" target="_blank" rel="noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline text-sm mt-2 block">
-          Visit blog directly &rarr;
+      <div className="rounded-xl border border-dashed border-slate-300 py-12 text-center dark:border-slate-800">
+        <Rss className="mx-auto mb-3 h-8 w-8 text-slate-400 dark:text-slate-600" />
+        <p className="text-slate-500 dark:text-slate-400">Recent posts could not be loaded.</p>
+        <a
+          href={PROFILE.links.blog}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent-600 hover:underline dark:text-accent-400"
+        >
+          Visit the blog
+          <ArrowUpRight size={14} />
         </a>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <ul>
       {posts.map((post, idx) => (
-        <a 
-          key={idx} 
-          href={post.link}
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-col p-5 rounded-xl transition-all group border
-          bg-white dark:bg-slate-800 
-          border-slate-200 dark:border-slate-700 
-          hover:border-emerald-500/50 dark:hover:border-emerald-500/50 
-          hover:bg-slate-50 dark:hover:bg-slate-750"
-        >
-          <div className="flex items-start justify-between">
-            <h4 className="text-slate-800 dark:text-slate-200 font-medium group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
+        <li key={idx}>
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noreferrer"
+            className="group grid gap-1 border-b border-slate-200 py-5 transition-colors hover:border-accent-500/40 sm:grid-cols-[8.5rem_minmax(0,1fr)_auto] sm:items-baseline sm:gap-6 dark:border-slate-800"
+          >
+            <span className="text-sm tabular-nums text-slate-500 dark:text-slate-500">
+              {post.pubDate ? <time dateTime={post.pubDate}>{formatDate(post.pubDate)}</time> : 'Recent'}
+            </span>
+            <span className="font-medium leading-snug text-slate-900 transition-colors group-hover:text-accent-600 dark:text-slate-100 dark:group-hover:text-accent-400">
               {post.title}
-            </h4>
-            <ChevronRight size={16} className="text-slate-400 dark:text-slate-600 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mt-1 flex-shrink-0 ml-2" />
-          </div>
-          <div className="mt-4 flex items-center gap-2 text-xs text-slate-500">
-             <Calendar size={12} />
-             {post.pubDate || 'Recent'}
-          </div>
-        </a>
+            </span>
+            <ArrowUpRight
+              size={16}
+              className="hidden shrink-0 text-slate-400 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-600 sm:block dark:text-slate-600 dark:group-hover:text-accent-400"
+            />
+          </a>
+        </li>
       ))}
-      
-      <div className="md:col-span-2 flex justify-center mt-6">
-        <a href="https://jon-bown.github.io/blog" className="px-6 py-2 rounded-full text-sm font-medium transition-colors border
-        bg-white dark:bg-slate-800 
-        text-slate-600 dark:text-slate-300 
-        border-slate-200 dark:border-slate-700
-        hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 dark:hover:text-white">
-            View All Posts
-        </a>
-      </div>
-    </div>
+    </ul>
   );
 };
 

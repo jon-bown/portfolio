@@ -1,5 +1,7 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { Project } from '../types';
+import { formatDate } from '../utils';
 import GithubIcon from './GithubIcon';
 import KaggleIcon from './KaggleIcon';
 
@@ -7,29 +9,11 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-// Formats 'YYYY-MM' as 'Jun 2024' and 'YYYY-MM-DD' as 'Jul 7, 2026'.
-// Parsed by hand so the date never shifts a day across timezones.
-const formatDate = (date: string): string => {
-  const [year, month, day] = date.split('-');
-  const label = MONTHS[Number(month) - 1];
-  if (!year || !label) return date;
-  return day ? `${label} ${Number(day)}, ${year}` : `${label} ${year}`;
-};
-
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const hasGithub = !!project.githubLink;
-  const hasKaggle = !!project.kaggleLink;
   const hasDirectLink = !!project.link;
 
   return (
-    <article className={`
-        group relative overflow-hidden rounded-xl border flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl
-        bg-white border-slate-200 hover:border-emerald-500/40 hover:shadow-emerald-500/5
-        dark:bg-slate-900 dark:border-slate-800/60 dark:hover:border-emerald-500/40 dark:hover:shadow-emerald-500/5
-    `}>
-
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/50 hover:shadow-xl hover:shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-accent-500/50 dark:hover:shadow-black/20">
       {/* Stretched link covers the whole card */}
       {hasDirectLink && (
         <a
@@ -41,72 +25,71 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
       )}
 
-      {/* Image Container */}
-      <div className="h-48 overflow-hidden relative bg-slate-100 dark:bg-slate-950">
+      {/* Thumbnail */}
+      <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
         <img
           src={project.imageUrl}
-          alt={project.title}
+          alt=""
           loading="lazy"
           style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
         />
-        {/* Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent dark:from-slate-900 dark:via-slate-900/20 dark:to-transparent opacity-80"></div>
-
-        {/* Category Badge */}
-        <div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-950/70 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] uppercase tracking-wider font-semibold text-emerald-600 dark:text-emerald-400 border border-slate-200 dark:border-slate-800 shadow-sm">
-          {project.category}
-        </div>
-
-        {/* Badge (Beta/etc) */}
         {project.badge && (
-          <div className="absolute top-3 right-3 bg-indigo-500 text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider shadow-lg">
+          <span className="absolute right-3 top-3 rounded bg-slate-900/85 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-sm">
             {project.badge}
-          </div>
+          </span>
         )}
       </div>
 
       {/* Content */}
-      <div className="p-5 flex flex-col flex-1 relative">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
+      <div className="flex flex-1 flex-col p-5">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-600 dark:text-accent-400">
+          {project.category}
+        </p>
+
+        <h3 className="mt-2 font-serif text-lg font-semibold leading-snug text-slate-900 transition-colors group-hover:text-accent-600 dark:text-slate-100 dark:group-hover:text-accent-400">
           {project.title}
         </h3>
-        <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 flex-1 line-clamp-3 leading-relaxed">
+
+        <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
           {project.description}
         </p>
 
-        {/* Actions */}
-        <div className="relative z-20 flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-800 mt-auto">
-          <div className="flex-1">
-            {project.date && (
-              <time dateTime={project.date} className="text-xs text-slate-400 dark:text-slate-500">
-                {formatDate(project.date)}
-              </time>
-            )}
+        {/* Meta row */}
+        <div className="relative z-20 mt-5 flex items-center gap-2 border-t border-slate-100 pt-4 dark:border-slate-800">
+          <div className="flex-1 text-xs text-slate-400 dark:text-slate-500">
+            {project.date && <time dateTime={project.date}>{formatDate(project.date)}</time>}
           </div>
 
-          {hasGithub && (
+          {project.githubLink && (
             <a
               href={project.githubLink}
               target="_blank"
               rel="noreferrer"
-              className="p-1.5 text-slate-400 hover:text-slate-900 dark:text-slate-500 dark:hover:text-white dark:hover:bg-slate-800 hover:bg-slate-100 rounded-lg transition-all"
-              title="View Source on GitHub"
+              title="View source on GitHub"
+              className="rounded-lg p-1.5 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-500 dark:hover:bg-slate-800 dark:hover:text-white"
             >
-              <GithubIcon size={18} />
+              <GithubIcon size={17} />
             </a>
           )}
 
-          {hasKaggle && (
+          {project.kaggleLink && (
             <a
               href={project.kaggleLink}
               target="_blank"
               rel="noreferrer"
-              className="p-1.5 text-slate-400 hover:text-sky-600 dark:text-slate-500 dark:hover:text-sky-400 dark:hover:bg-slate-800 hover:bg-slate-100 rounded-lg transition-all"
               title="View on Kaggle"
+              className="rounded-lg p-1.5 text-slate-400 transition-colors hover:bg-slate-100 hover:text-sky-600 dark:text-slate-500 dark:hover:bg-slate-800 dark:hover:text-sky-400"
             >
-              <KaggleIcon size={18} />
+              <KaggleIcon size={17} />
             </a>
+          )}
+
+          {hasDirectLink && (
+            <ArrowUpRight
+              size={16}
+              className="text-slate-300 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-600 dark:text-slate-700 dark:group-hover:text-accent-400"
+            />
           )}
         </div>
       </div>

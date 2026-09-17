@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jonathan Bown Portfolio</title>
-    <!-- We keep the Tailwind CDN for simplicity in this specific setup, 
-         though in a full production app you might install tailwind via npm -->
+    <title>Jonathan Bown — AI / Machine Learning Engineer</title>
+    <meta name="description" content="Jonathan Bown is a Principal AI/Machine Learning Engineer at WGU working on MLOps, applied machine learning, and open source. Talks, writing, research, and projects." />
+    <meta name="author" content="Jonathan Bown" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jonathan Bown — AI / Machine Learning Engineer" />
+    <meta property="og:description" content="Principal AI/Machine Learning Engineer at WGU. MLOps, applied machine learning, speaking, and open source." />
+
+    <!-- Tailwind via CDN keeps this site a single-step build; a production app would install it via npm. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -13,52 +19,94 @@
         theme: {
           extend: {
             colors: {
+              paper: '#faf9f7',
+              ink: '#0b1120',
               slate: {
                 850: '#151e2e',
                 900: '#0f172a',
                 950: '#020617',
               },
-              emerald: {
-                450: '#10b981', // Custom accent
-              }
+              accent: {
+                50:  '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                700: '#047857',
+              },
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              serif: ['"Source Serif 4"', 'Georgia', 'Cambria', 'serif'],
+            },
+            maxWidth: {
+              content: '72rem',
+              prose: '42rem',
             },
             animation: {
               'fadeIn': 'fadeIn 0.5s ease-out forwards',
+              'rise': 'rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             },
             keyframes: {
               fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              rise: {
+                '0%': { opacity: '0', transform: 'translateY(14px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
-            }
+              },
+            },
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: 'Inter', sans-serif;
-        /* Background and color handled by Tailwind classes in App.tsx */
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
         transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      /* Anchor targets clear the sticky header. */
+      section[id] {
+        scroll-margin-top: 5.5rem;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: transparent; 
+        background: transparent;
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155; 
+        background: #cbd5e1;
         border-radius: 10px;
       }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
       ::-webkit-scrollbar-thumb:hover {
-        background: #475569; 
+        background: #94a3b8;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
       }
       .scrollbar-hide::-webkit-scrollbar {
           display: none;
@@ -68,20 +116,7 @@
           scrollbar-width: none;
       }
     </style>
-
-<script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="./assets/index-iJCGUVSb.js"></script>
+  <script type="module" crossorigin src="./assets/index-ovMMhm-6.js"></script>
 </head>
   <body>
     <div id="root"></div>
