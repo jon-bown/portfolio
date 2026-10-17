@@ -9,7 +9,7 @@ const Contact: React.FC = () => (
     aria-labelledby="contact-heading"
     className="border-t border-slate-200/80 dark:border-slate-800/80"
   >
-    <div className="mx-auto w-full max-w-content px-6 py-20 lg:px-10 lg:py-28">
+    <div className="mx-auto w-full max-w-content px-6 py-14 lg:px-10 lg:py-20">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-600 dark:text-accent-400">

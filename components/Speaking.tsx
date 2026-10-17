@@ -117,7 +117,7 @@ const Speaking: React.FC = () => {
       }
     >
       {UPCOMING.length > 0 && (
-        <div className="mb-14 space-y-5">
+        <div className="mb-10 space-y-5">
           {UPCOMING.map((item) => (
             <UpcomingCard key={item.id} item={item} />
           ))}

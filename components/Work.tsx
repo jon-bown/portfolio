@@ -45,6 +45,7 @@ const Work: React.FC = () => {
       eyebrow="Work"
       title="Selected projects and research"
       intro="Papers, datasets, notebooks, and applications spanning machine learning, statistics, and software engineering."
+      tinted
     >
       {/* Filters */}
       <div className="mb-10 flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">

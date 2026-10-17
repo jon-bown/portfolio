@@ -24,8 +24,8 @@ const Section: React.FC<SectionProps> = ({ id, eyebrow, title, intro, aside, tin
       ${tinted ? 'bg-white dark:bg-slate-900/40' : 'bg-transparent'}
     `}
   >
-    <div className="mx-auto w-full max-w-content px-6 py-20 lg:px-10 lg:py-28">
-      <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+    <div className="mx-auto w-full max-w-content px-6 py-14 lg:px-10 lg:py-20">
+      <div className="mb-9 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-prose">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-600 dark:text-accent-400">
             {eyebrow}

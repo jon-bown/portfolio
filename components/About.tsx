@@ -6,7 +6,7 @@ const About: React.FC = () => (
   <Section
     id="about"
     eyebrow="About"
-    title="Engineering machine learning that makes it to production"
+    title="AI Engineer & Software Developer"
     tinted
   >
     <div className="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-16">
@@ -46,7 +46,7 @@ const About: React.FC = () => (
           <div>
             <dt className="text-slate-500 dark:text-slate-500">Currently</dt>
             <dd className="mt-1 font-medium text-slate-900 dark:text-slate-100">
-              {PROFILE.headline}, {PROFILE.company}
+              {PROFILE.title}, {PROFILE.company}
             </dd>
           </div>
           <div>

@@ -2,15 +2,14 @@ import { Category, Project } from './types';
 
 export const PROFILE = {
   name: "Jonathan Bown",
-  title: "AI Engineer",
-  headline: "Principal AI / Machine Learning Engineer",
+  title: "Principal AI Engineer",
   company: "WGU",
   location: "North Carolina, USA",
   /** One-line summary used in the hero and page metadata. */
   tagline: "Building ML & AI systems in higher education",
   /** Rendered as separate paragraphs in the About section. */
   bio: [
-  "I'm a Principal AI/Machine Learning Engineer at WGU, where I build a governed AI platform that serves both employees and students at scale, and bring CI/CD and software engineering discipline to data science and AI workflows. I hold an MSCS from UT Austin with a foundation in Mathematics, Statistics, and Computer Science, and I've worked across banking, fintech, marketing, higher education, and sports.",
+  "I'm a Principal AI Engineer at WGU, where I build a governed AI platform that serves both employees and students at scale, and bring CI/CD and software engineering discipline to data science and AI workflows. I hold an MSCS from UT Austin with a foundation in Mathematics, Statistics, and Computer Science, and I've worked across banking, fintech, marketing, higher education, and sports.",
     "I'm an MLflow Ambassador (2026) and open source contributor, and I recently spoke at ODSC on AgentOps and evaluation-driven development, including a hands-on MLflow workshop at ODSC East 2026. I also contribute learning content and tutorials on the generative AI lifecycle with MLflow. I work in Python, C#, SQL, Java, and R, and I'm always looking for the next thing to learn, build, and share."
   ],
   education: [
@@ -49,13 +48,32 @@ export const PROJECTS: Project[] = [
     date: "2026-03"
   },
   {
+    id: 'blog-self-improvement-mlflow-2',
+    title: "Self-Improvement & MLflow: Part 2",
+    description: "Turning trace feedback into an evaluation dataset, testing a prompt change, and moving regression tests into CI.",
+    category: Category.Blog,
+    link: "https://opendatascience.com/self-improvement-mlflow-part-2/",
+    imageUrl: "https://opendatascience.com/wp-content/uploads/2026/10/Self-Improvement-MLflow_-Part-2.webp",
+    date: "2026-10-13"
+  },
+  {
+    id: 'blog-self-improvement-mlflow-1',
+    title: "Self-Improvement and Self-Evolving with MLflow",
+    description: "Part 1: what self-improvement and self-evolution mean for AI agents, and the MLflow building blocks behind the loop.",
+    category: Category.Blog,
+    link: "https://opendatascience.com/self-improvement-vs-self-evolution-mlflow-part-1/",
+    imageUrl: "https://opendatascience.com/wp-content/uploads/2026/10/Self-Improvement-MLflow-Blogs.png",
+    date: "2026-10-02"
+  },
+  {
     id: 'blog-mlflow-1',
     title: "Practical AgentOps: Getting Started with MLflow 3",
     description: "Open Data Science Conference Workshop Preview",
     category: Category.Blog,
     link: "https://opendatascience.com/practical-agentops-getting-started-with-mlflow-3/",
     imageUrl: "https://opendatascience.com/wp-content/uploads/2026/02/blog-logo-640x300.png",
-    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3"
+    githubLink: "https://github.com/jon-bown/practical-agent-ops-mlflow3",
+    date: "2026-02-23"
   },
 
     {

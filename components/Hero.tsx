@@ -11,13 +11,13 @@ const Hero: React.FC = () => (
       className="pointer-events-none absolute inset-0 bg-[radial-gradient(60rem_40rem_at_70%_-10%,rgba(16,185,129,0.10),transparent_60%)] dark:bg-[radial-gradient(60rem_40rem_at_70%_-10%,rgba(16,185,129,0.14),transparent_60%)]"
     />
 
-    <div className="relative mx-auto w-full max-w-content px-6 pb-20 pt-32 lg:px-10 lg:pb-28 lg:pt-44">
+    <div className="relative mx-auto w-full max-w-content px-6 pb-14 pt-28 lg:px-10 lg:pb-20 lg:pt-36">
       <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-20">
         {/* Introduction */}
         <div className="max-w-2xl animate-rise">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs font-medium text-slate-600 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-400">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-            {PROFILE.headline} at {PROFILE.company}
+            {PROFILE.title} at {PROFILE.company}
           </p>
 
           <h1 className="font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-slate-50">
