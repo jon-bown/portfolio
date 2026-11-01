@@ -26,6 +26,27 @@ export interface Project {
   imagePosition?: string;
 }
 
+export interface WorkshopResource {
+  label: string;
+  href: string;
+  kind: 'talk' | 'repo' | 'slides';
+}
+
+/** A delivered talk or workshop with the materials attendees can take away. */
+export interface Workshop {
+  id: string;
+  event: string;
+  title: string;
+  /** Where the title links, usually the event's session page. */
+  link?: string;
+  description: string;
+  /** ISO date, either 'YYYY-MM' or 'YYYY-MM-DD'. */
+  date: string;
+  location?: string;
+  imageUrl?: string;
+  resources: WorkshopResource[];
+}
+
 export interface BlogPost {
   title: string;
   link: string;

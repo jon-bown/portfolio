@@ -7,7 +7,7 @@ const Contact: React.FC = () => (
   <section
     id="contact"
     aria-labelledby="contact-heading"
-    className="border-t border-slate-200/80 dark:border-slate-800/80"
+    className="border-t border-slate-200/80 bg-white dark:border-slate-800/80 dark:bg-slate-900/40"
   >
     <div className="mx-auto w-full max-w-content px-6 py-14 lg:px-10 lg:py-20">
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20">

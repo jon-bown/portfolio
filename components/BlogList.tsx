@@ -11,6 +11,17 @@ const MAX_POSTS = 5;
 const decodeEntities = (value: string): string =>
   new DOMParser().parseFromString(value, 'text/html').documentElement.textContent ?? value;
 
+/** Feed links come from outside this bundle; only allow http(s) so a `javascript:` URL can never reach an href. */
+const safeLink = (href: string | null | undefined): string => {
+  if (!href) return '#';
+  try {
+    const url = new URL(href, FEED_URL);
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '#';
+  } catch {
+    return '#';
+  }
+};
+
 const BlogList: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +39,7 @@ const BlogList: React.FC = () => {
           .slice(0, MAX_POSTS)
           .map((item) => ({
             title: decodeEntities(item.querySelector('title')?.textContent || 'Untitled Post'),
-            link: item.querySelector('link')?.getAttribute('href') || '#',
+            link: safeLink(item.querySelector('link')?.getAttribute('href')),
             pubDate: item.querySelector('published')?.textContent?.substring(0, 10),
           }));
         setPosts(feedPosts);

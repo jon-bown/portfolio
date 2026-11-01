@@ -1,4 +1,4 @@
-import { Category, Project } from './types';
+import { Category, Project, Workshop } from './types';
 
 export const PROFILE = {
   name: "Jonathan Bown",
@@ -35,6 +35,24 @@ export const PROFILE = {
     blog: "https://jon-bown.github.io/blog"
   }
 };
+
+export const WORKSHOPS: Workshop[] = [
+  {
+    id: 'workshop-odsc-west-2026',
+    event: "ODSC AI West 2026",
+    title: "Build Your Own Self-Improving Agent with OpenClaw and MLflow",
+    link: "https://odsc.ai/speakers-portfolio/build-your-own-self-improving-agent-with-openclaw-and-mlflow/",
+    description: "A hands-on tutorial on agents that learn from their own traces: turning feedback into evaluation data, proposing prompt updates, and gating every change before it ships. The repo holds the OpenClaw-to-MLflow connector, the self-improving harness, a level-by-level agent build, and agent skills that package the workflow.",
+    date: "2026-10-27",
+    location: "Hyatt Regency SFO",
+    imageUrl: "https://odsc.ai/wp-content/uploads/2026/02/odscai_west2026.jpg",
+    resources: [
+      { label: "Talk page", href: "https://odsc.ai/speakers-portfolio/build-your-own-self-improving-agent-with-openclaw-and-mlflow/", kind: 'talk' },
+      { label: "GitHub repo", href: "https://github.com/jon-bown/self-improving-agents", kind: 'repo' },
+      { label: "Slides", href: "https://docs.google.com/presentation/d/1FoCuZpJWGJsmFCGiPPbQibouU2IPz9Rg3LoeZH-mB8w/edit?usp=sharing", kind: 'slides' },
+    ],
+  },
+];
 
 export const PROJECTS: Project[] = [
   {
@@ -97,12 +115,12 @@ export const PROJECTS: Project[] = [
   // Media
   {
     id: 'media-odsc-west-2026',
-    title: "ODSC AI West 2026",
-    description: "Upcoming appearance - Hyatt Regency SFO, October 27-28, 2026.",
+    title: "Build Your Own Self-Improving Agent with OpenClaw and MLflow",
+    description: "Tutorial - ODSC AI West 2026, Hyatt Regency SFO.",
     category: Category.Media,
-    link: "https://odsc.ai/west/",
+    link: "https://odsc.ai/speakers-portfolio/build-your-own-self-improving-agent-with-openclaw-and-mlflow/",
     imageUrl: "https://odsc.ai/wp-content/uploads/2026/02/odscai_west2026.jpg",
-    badge: "Upcoming",
+    badge: "Tutorial",
     date: "2026-10-27"
   },
   {

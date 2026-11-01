@@ -14,6 +14,7 @@ const Writing: React.FC = () => (
     id="writing"
     eyebrow="Writing"
     title="Articles and Blog posts"
+    tinted
     aside={
       <a
         href={PROFILE.links.blog}
