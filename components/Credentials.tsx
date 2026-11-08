@@ -19,6 +19,7 @@ const Credentials: React.FC = () => {
       eyebrow="Credentials"
       title="Education and certifications"
       intro="Graduate work in computer science and statistics, backed by industry certification in applied machine learning."
+      tinted
     >
       <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
         {/* Education */}

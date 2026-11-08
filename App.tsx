@@ -14,11 +14,11 @@ import useScrollSpy from './components/useScrollSpy';
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'about', label: 'About' },
-  { id: 'credentials', label: 'Credentials' },
   { id: 'speaking', label: 'Speaking' },
   { id: 'workshops', label: 'Workshops' },
   { id: 'writing', label: 'Writing' },
   { id: 'work', label: 'Work' },
+  { id: 'credentials', label: 'Credentials' },
   { id: 'apps', label: 'Apps' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -58,11 +58,11 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <About />
-        <Credentials />
         <Speaking />
         <Workshops />
         <Writing />
         <Work />
+        <Credentials />
         <Apps />
         <Contact />
       </main>

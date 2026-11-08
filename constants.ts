@@ -6,11 +6,12 @@ export const PROFILE = {
   company: "WGU",
   location: "North Carolina, USA",
   /** One-line summary used in the hero and page metadata. */
-  tagline: "Building ML & AI systems in higher education",
+  tagline: "Technical leader, educator, and speaker.",
   /** Rendered as separate paragraphs in the About section. */
   bio: [
-  "I'm a Principal AI Engineer at WGU, where I build a governed AI platform that serves both employees and students at scale, and bring CI/CD and software engineering discipline to data science and AI workflows. I hold an MSCS from UT Austin and an M.S. in Statistics from the University of Utah, with a foundation in Mathematics, Statistics, and Computer Science, and I've worked across banking, fintech, marketing, higher education, and sports.",
-    "I'm an MLflow Ambassador (2026) and open source contributor, and I recently spoke at ODSC on AgentOps and evaluation-driven development, including a hands-on MLflow workshop at ODSC East 2026. I also contribute learning content and tutorials on the generative AI lifecycle with MLflow. I work in Python, C#, SQL, Java, and R, and I'm always looking for the next thing to learn, build, and share."
+    "I'm a technical leader, educator, and speaker working at the intersection of AI engineering and teaching. As a Principal AI Engineer at WGU, I help shape a governed AI platform that serves employees and students at scale, and I bring CI/CD and software engineering discipline to data science and AI workflows.",
+    "Teaching is the thread through all of it. I lead hands-on workshops at ODSC, including MLflow sessions at ODSC East and ODSC AI West 2026, speak on AgentOps and evaluation-driven development, and write tutorials and learning content on the generative AI lifecycle as an MLflow Ambassador. I also join podcasts to talk about how engineering teams are adapting to agents.",
+    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an M.S. in Statistics from the University of Utah, and experience across banking, fintech, marketing, higher education, and sports."
   ],
   education: [
     { degree: "M.S. Computer Science", school: "The University of Texas at Austin", year: "2023" },
@@ -19,11 +20,11 @@ export const PROFILE = {
   ],
   /** Short, factual highlights surfaced next to the bio. */
   highlights: [
-    "MLflow Ambassador",
-    "ODSC AI conference speaker",
-    "Podcast Guest",
-    "Databricks Certified",
-    "Kaggle datasets & notebooks author"
+    "Conference speaker & workshop instructor (ODSC)",
+    "MLflow Ambassador & tutorial author",
+    "Podcast guest",
+    "Principal AI Engineer",
+    "Databricks Certified"
   ],
   links: {
     kaggle: "https://www.kaggle.com/jonbown",
