@@ -8,8 +8,8 @@ import ShowMore from './ShowMore';
 
 const INITIAL_VISIBLE = 6;
 
-/** Speaking, certifications, and writing each have their own section. */
-const EXCLUDED = new Set<Category>([Category.Media, Category.Certifications, Category.Blog]);
+/** Speaking, certifications, writing, and apps each have their own section. */
+const EXCLUDED = new Set<Category>([Category.Media, Category.Certifications, Category.Blog, Category.Apps]);
 
 const WORK = PROJECTS.filter((p) => !EXCLUDED.has(p.category));
 
@@ -19,7 +19,6 @@ const FILTERS: { id: string; label: string }[] = [
   { id: Category.Mathematics, label: 'Mathematics' },
   { id: Category.Datasets, label: 'Datasets' },
   { id: Category.Notebooks, label: 'Notebooks' },
-  { id: Category.Apps, label: 'Apps' },
   { id: Category.Repos, label: 'Repositories' },
 ].filter((f) => f.id === 'All' || WORK.some((p) => p.category === f.id));
 
@@ -44,7 +43,7 @@ const Work: React.FC = () => {
       id="work"
       eyebrow="Work"
       title="Selected projects and research"
-      intro="Papers, datasets, notebooks, and applications spanning machine learning, statistics, and software engineering."
+      intro="Papers, datasets, notebooks, and repositories spanning machine learning, statistics, and software engineering."
     >
       {/* Filters */}
       <div className="mb-10 flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">

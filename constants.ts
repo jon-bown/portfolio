@@ -32,7 +32,8 @@ export const PROFILE = {
     linkedin: "https://www.linkedin.com/in/jonathan-bown/",
     email: "mailto:Jonathan.k.bown@gmail.com",
     hackerrank: "https://www.hackerrank.com/profile/jonvzw6",
-    blog: "https://jon-bown.github.io/blog"
+    blog: "https://jon-bown.github.io/blog",
+    apps: "https://appfactorial.com"
   }
 };
 
@@ -122,6 +123,16 @@ export const PROJECTS: Project[] = [
     imageUrl: "https://odsc.ai/wp-content/uploads/2026/02/odscai_west2026.jpg",
     badge: "Tutorial",
     date: "2026-10-27"
+  },
+  {
+    id: 'media-podcast-odsc-aix',
+    title: "Building Self-Improving AI Agents",
+    description: "Guest - ODSC's Ai X Podcast",
+    category: Category.Media,
+    link: "https://podcasts.apple.com/us/podcast/odscs-ai-x-podcast/id1721516836?i=1000800082719",
+    imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/d6/08/6e/d6086e1c-79d4-682c-f8b6-40a054b079ad/6c84ba11-0ee7-4b97-ad2b-394988a0f919.png/1200x1200bf-60.jpg",
+    badge: "Podcast",
+    date: "2026-11-05"
   },
   {
     id: 'media-podcast-1',
@@ -408,6 +419,15 @@ export const PROJECTS: Project[] = [
     imageUrl: "./images/lin_reg.png?raw=true"
   },
   // Apps
+  {
+    id: 'app-gaffe',
+    title: "Gaffe",
+    description: "Political soundboard on iOS.",
+    category: Category.Apps,
+    link: "https://apps.apple.com/us/app/gaffe-political-soundboard/id1503943703",
+    imageUrl: "./images/gaffe.png",
+    date: "2020-03"
+  },
   {
     id: 'app-1',
     title: "Watchlist",

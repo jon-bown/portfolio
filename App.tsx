@@ -6,6 +6,7 @@ import Credentials from './components/Credentials';
 import Speaking from './components/Speaking';
 import Workshops from './components/Workshops';
 import Work from './components/Work';
+import Apps from './components/Apps';
 import Writing from './components/Writing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'workshops', label: 'Workshops' },
   { id: 'writing', label: 'Writing' },
   { id: 'work', label: 'Work' },
+  { id: 'apps', label: 'Apps' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -61,6 +63,7 @@ const App: React.FC = () => {
         <Workshops />
         <Writing />
         <Work />
+        <Apps />
         <Contact />
       </main>
 
