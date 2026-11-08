@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail } from 'lucide-react';
+import { AppWindow, Linkedin, Mail } from 'lucide-react';
 import { PROFILE } from '../constants';
 import GithubIcon from './GithubIcon';
 import KaggleIcon from './KaggleIcon';
@@ -9,6 +9,8 @@ export interface SocialLink {
   label: string;
   handle: string;
   icon: React.ReactNode;
+  /** Show only in the Contact grid, not the compact icon row. */
+  contactOnly?: boolean;
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -16,13 +18,14 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { href: PROFILE.links.linkedin, label: 'LinkedIn', handle: 'jonathan-bown', icon: <Linkedin size={18} /> },
   { href: PROFILE.links.kaggle, label: 'Kaggle', handle: 'jonbown', icon: <KaggleIcon size={18} /> },
   { href: PROFILE.links.medium, label: 'Medium', handle: '@jonbown', icon: <span className="font-serif text-lg font-bold leading-none">M</span> },
+  { href: PROFILE.links.apps, label: 'Apps', handle: 'appfactorial.com', icon: <AppWindow size={18} />, contactOnly: true },
   { href: PROFILE.links.email, label: 'Email', handle: 'Jonathan.k.bown@gmail.com', icon: <Mail size={18} /> },
 ];
 
 /** Compact icon row used in the hero and footer. */
 const SocialLinks: React.FC<{ className?: string }> = ({ className = '' }) => (
   <ul className={`flex items-center gap-2 ${className}`}>
-    {SOCIAL_LINKS.map((link) => (
+    {SOCIAL_LINKS.filter((link) => !link.contactOnly).map((link) => (
       <li key={link.label}>
         <a
           href={link.href}
