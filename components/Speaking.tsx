@@ -104,7 +104,7 @@ const Speaking: React.FC = () => {
       id="speaking"
       eyebrow="Speaking & Media"
       title="Talks, workshops, and appearances"
-      intro="Conference sessions, podcasts, and community work on MLOps and applied machine learning."
+      intro="Motivational and technical talks, hands-on workshops, and podcasts on AI engineering, MLOps, and building with agents."
       tinted
       aside={
         <a

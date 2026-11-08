@@ -21,6 +21,10 @@ const Contact: React.FC = () => (
           >
             Let&rsquo;s Connect
           </h2>
+          <p className="mt-4 max-w-prose text-base leading-relaxed text-slate-600 dark:text-slate-400">
+            Planning a conference, team training, or podcast? I&rsquo;d love to hear about it. Reach out about
+            motivational or technical talks, hands-on workshops, or technical leadership.
+          </p>
 
           <div className="mt-8">
             <a

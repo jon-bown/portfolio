@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, MapPin } from 'lucide-react';
+import { ArrowDown, Mail, MapPin } from 'lucide-react';
 import { PROFILE } from '../constants';
 import SocialLinks from './SocialLinks';
 
@@ -30,17 +30,18 @@ const Hero: React.FC = () => (
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
-              href="#work"
+              href="#speaking"
               className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-600 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-accent-400"
             >
-              View selected work
+              Talks &amp; workshops
               <ArrowDown size={15} />
             </a>
             <a
-              href="#speaking"
+              href={PROFILE.links.email}
               className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-slate-900 hover:text-slate-900 dark:border-slate-700 dark:text-slate-300 dark:hover:border-slate-400 dark:hover:text-slate-50"
             >
-              Speaking &amp; media
+              <Mail size={15} />
+              Invite me to speak
             </a>
           </div>
 
