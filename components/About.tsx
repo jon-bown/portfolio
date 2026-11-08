@@ -6,8 +6,7 @@ const About: React.FC = () => (
   <Section
     id="about"
     eyebrow="About"
-    title="AI Engineer & Software Developer"
-    tinted
+    title="Technical Leader, Educator & Speaker"
   >
     <div className="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-16">
       {/* Biography */}
