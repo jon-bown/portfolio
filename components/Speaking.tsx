@@ -105,7 +105,6 @@ const Speaking: React.FC = () => {
       eyebrow="Speaking & Media"
       title="Talks, workshops, and appearances"
       intro="Motivational and technical talks, hands-on workshops, and podcasts on AI engineering, MLOps, and building with agents."
-      tinted
       aside={
         <a
           href={PROFILE.links.email}

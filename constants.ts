@@ -9,9 +9,9 @@ export const PROFILE = {
   tagline: "Technical leader, educator, and speaker.",
   /** Rendered as separate paragraphs in the About section. */
   bio: [
-    "I'm a technical leader, educator, and speaker working at the intersection of AI engineering and teaching. As a Principal AI Engineer at WGU, I help shape a governed AI platform that serves employees and students at scale, and I bring CI/CD and software engineering discipline to data science and AI workflows.",
-    "Teaching is the thread through all of it. I lead hands-on workshops at ODSC, including MLflow sessions at ODSC East and ODSC AI West 2026, speak on AgentOps and evaluation-driven development, and write tutorials and learning content on the generative AI lifecycle as an MLflow Ambassador. I also join podcasts to talk about how engineering teams are adapting to agents.",
-    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an M.S. in Statistics from the University of Utah, and experience across banking, fintech, marketing, higher education, and sports."
+    "I'm a technical leader, educator, and speaker working at the intersection of AI engineering and education. As a Principal AI Engineer at Western Governors University, I help shape a governed AI platform that serves employees and students at scale, and I bring CI/CD and software engineering discipline to data science and AI workflows.",
+    "I enjoy leading hands-on workshops at ODSC, including MLflow sessions at ODSC East and ODSC AI West 2026, speaking on AgentOps and evaluation-driven development, and writing tutorials and learning content on the generative AI lifecycle as an MLflow Ambassador.", "I also have a lot of experience with full stack web and mobile application development with several apps on the iOS App Store.",
+    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an M.S. in Statistics from the University of Utah, and experience across banking, fintech, marketing, pharmaceuticals, higher education, and sports."
   ],
   education: [
     { degree: "M.S. Computer Science", school: "The University of Texas at Austin", year: "2023" },
@@ -20,10 +20,11 @@ export const PROFILE = {
   ],
   /** Short, factual highlights surfaced next to the bio. */
   highlights: [
+    "Principal AI Engineer",
     "Conference speaker & workshop instructor (ODSC)",
     "MLflow Ambassador & tutorial author",
     "Podcast guest",
-    "Principal AI Engineer",
+    "Motivational speaker",
     "Databricks Certified"
   ],
   links: {
