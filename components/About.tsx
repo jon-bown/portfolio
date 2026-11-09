@@ -6,18 +6,19 @@ const About: React.FC = () => (
   <Section
     id="about"
     eyebrow="About"
-    title="AI Engineer & Software Developer"
+    title="Technical Leader, Educator & Speaker"
     tinted
   >
     <div className="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-16">
       {/* Biography */}
-      <div className="space-y-6">
+      <div className="max-w-prose space-y-5">
         {PROFILE.bio.map((paragraph, idx) => (
           <p
             key={idx}
             className={`
-              leading-[1.75] text-slate-700 dark:text-slate-300
-              ${idx === 0 ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'}
+              ${idx === 0
+                ? 'text-lg leading-relaxed text-slate-800 sm:text-xl dark:text-slate-200'
+                : 'text-base leading-[1.75] text-slate-700 dark:text-slate-300'}
             `}
           >
             {paragraph}
@@ -34,9 +35,9 @@ const About: React.FC = () => (
           {PROFILE.highlights.map((highlight) => (
             <li
               key={highlight}
-              className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300"
+              className="flex items-start gap-3 text-[0.9375rem] leading-snug text-slate-700 dark:text-slate-300"
             >
-              <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" />
+              <span className="mt-[0.4rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" />
               {highlight}
             </li>
           ))}

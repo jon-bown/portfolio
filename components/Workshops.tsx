@@ -85,6 +85,7 @@ const Workshops: React.FC = () => (
     eyebrow="Workshop Materials"
     title="Code and slides from my sessions"
     intro="Everything you need to follow along after the talk: repos, notebooks, and slide decks."
+    tinted
   >
     <div className="space-y-5">
       {SORTED.map((item) => (
