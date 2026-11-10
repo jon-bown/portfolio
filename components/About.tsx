@@ -12,14 +12,10 @@ const About: React.FC = () => (
     <div className="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-16">
       {/* Biography */}
       <div className="max-w-prose space-y-5">
-        {PROFILE.bio.map((paragraph, idx) => (
+        {PROFILE.bio.map((paragraph) => (
           <p
-            key={idx}
-            className={`
-              ${idx === 0
-                ? 'text-lg leading-relaxed text-slate-800 sm:text-xl dark:text-slate-200'
-                : 'text-base leading-[1.75] text-slate-700 dark:text-slate-300'}
-            `}
+            key={paragraph}
+            className="text-base leading-[1.75] text-slate-700 sm:text-lg dark:text-slate-300"
           >
             {paragraph}
           </p>
