@@ -50,10 +50,12 @@ const UpcomingCard: React.FC<{ item: Project }> = ({ item }) => (
         </h3>
         <p className="mt-3 leading-relaxed text-slate-600 dark:text-slate-400">{item.description}</p>
 
-        <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-slate-900 dark:text-slate-100">
-          Event details
-          <ArrowUpRight size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-        </span>
+        {item.link && (
+          <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-slate-900 dark:text-slate-100">
+            Event details
+            <ArrowUpRight size={15} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </span>
+        )}
       </div>
     </div>
   </article>

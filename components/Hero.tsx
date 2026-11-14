@@ -15,11 +15,6 @@ const Hero: React.FC = () => (
       <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-20">
         {/* Introduction */}
         <div className="max-w-2xl animate-rise">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs font-medium text-slate-600 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-            {PROFILE.title} at {PROFILE.company}
-          </p>
-
           <h1 className="font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-slate-50">
             {PROFILE.name}
           </h1>
