@@ -15,7 +15,7 @@ export interface SocialLink {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { href: PROFILE.links.github, label: 'GitHub', handle: 'Jon-bown', icon: <GithubIcon size={18} /> },
-  { href: PROFILE.links.linkedin, label: 'LinkedIn', handle: 'jonathan-bown', icon: <Linkedin size={18} /> },
+  { href: PROFILE.links.linkedin, label: 'LinkedIn', handle: 'Jonathan Bown', icon: <Linkedin size={18} /> },
   { href: PROFILE.links.kaggle, label: 'Kaggle', handle: 'jonbown', icon: <KaggleIcon size={18} /> },
   { href: PROFILE.links.medium, label: 'Medium', handle: '@jonbown', icon: <span className="font-serif text-lg font-bold leading-none">M</span> },
   { href: PROFILE.links.apps, label: 'Apps', handle: 'appfactorial.com', icon: <AppWindow size={18} />, contactOnly: true },

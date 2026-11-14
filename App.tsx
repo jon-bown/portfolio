@@ -19,8 +19,8 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'workshops', label: 'Workshops' },
   { id: 'writing', label: 'Writing' },
   { id: 'story', label: 'Story' },
-  { id: 'work', label: 'Work' },
   { id: 'credentials', label: 'Credentials' },
+  { id: 'work', label: 'Work' },
   { id: 'apps', label: 'Apps' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -64,8 +64,8 @@ const App: React.FC = () => {
         <Workshops />
         <Writing />
         <Story />
-        <Work />
         <Credentials />
+        <Work />
         <Apps />
         <Contact />
       </main>
