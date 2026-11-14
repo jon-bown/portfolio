@@ -117,16 +117,6 @@ export const PROJECTS: Project[] = [
   },
   // Media
   {
-    id: 'media-odsc-nyc-2026',
-    title: "ODSC AI NYC 2026: AI for Work Summit",
-    description: "Speaker - ODSC AI NYC 2026, Jay Conference Center Bryant Park, New York City.",
-    category: Category.Media,
-    link: "https://summit.ai",
-    imageUrl: "https://summit.ai/og-odsc-ai-nyc.png",
-    badge: "Talk",
-    date: "2026-12-02"
-  },
-  {
     id: 'media-odsc-west-2026',
     title: "Build Your Own Self-Improving Agent with OpenClaw and MLflow",
     description: "Tutorial - ODSC AI West 2026, Hyatt Regency SFO.",
