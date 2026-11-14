@@ -11,11 +11,11 @@ export const PROFILE = {
   bio: [
     "I'm a technical leader, educator, and speaker working at the intersection of AI engineering and education. As a Principal AI Engineer at Western Governors University, I help shape a governed AI platform that serves employees and students at scale, and I bring CI/CD and software engineering discipline to data science and AI workflows.",
     "I enjoy leading hands-on workshops at ODSC, including MLflow sessions at ODSC East and ODSC AI West 2026, speaking on AgentOps and evaluation-driven development, and writing tutorials and learning content on the generative AI lifecycle as an MLflow Ambassador.", "I also have a lot of experience with full stack web and mobile application development with several apps on the iOS App Store.",
-    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an M.S. in Statistics from the University of Utah, and experience across banking, fintech, marketing, pharmaceuticals, higher education, and sports."
+    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an MStat (Master of Statistics) from the University of Utah, and experience across banking, fintech, marketing, pharmaceuticals, higher education, and sports."
   ],
   education: [
     { degree: "M.S. Computer Science", school: "The University of Texas at Austin", year: "2023" },
-    { degree: "M.S. Statistics", school: "University of Utah", year: "2019" },
+    { degree: "MStat (Master of Statistics)", school: "University of Utah", year: "2019" },
     { degree: "B.S. Mathematics", school: "University of Utah", year: "2018" }
   ],
   /** Short, factual highlights surfaced next to the bio. */
