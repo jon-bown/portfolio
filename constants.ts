@@ -11,11 +11,11 @@ export const PROFILE = {
   bio: [
     "I'm a technical leader, educator, and speaker working at the intersection of AI engineering and education. As a Principal AI Engineer at Western Governors University, I help shape a governed AI platform that serves employees and students at scale, and I bring CI/CD and software engineering discipline to data science and AI workflows.",
     "I enjoy leading hands-on workshops at ODSC, including MLflow sessions at ODSC East and ODSC AI West 2026, speaking on AgentOps and evaluation-driven development, and writing tutorials and learning content on the generative AI lifecycle as an MLflow Ambassador.", "I also have a lot of experience with full stack web and mobile application development with several apps on the iOS App Store.",
-    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an MStat (Master of Statistics) from the University of Utah, and experience across banking, fintech, marketing, pharmaceuticals, higher education, and sports."
+    "My foundation is in Mathematics, Statistics, and Computer Science, with an MSCS from UT Austin and an MStat (Masters of Statistics) from the University of Utah, and experience across banking, fintech, marketing, pharmaceuticals, higher education, and sports."
   ],
   education: [
     { degree: "M.S. Computer Science", school: "The University of Texas at Austin", year: "2023" },
-    { degree: "MStat (Master of Statistics)", school: "University of Utah", year: "2019" },
+    { degree: "MStat (Masters of Statistics)", school: "University of Utah", year: "2019" },
     { degree: "B.S. Mathematics", school: "University of Utah", year: "2018" }
   ],
   /** Short, factual highlights surfaced next to the bio. */
@@ -116,6 +116,16 @@ export const PROJECTS: Project[] = [
     imageUrl: "./images/code_rank.png?raw=true",
   },
   // Media
+  {
+    id: 'media-odsc-nyc-2026',
+    title: "ODSC AI NYC 2026: AI for Work Summit",
+    description: "Speaker - ODSC AI NYC 2026, Jay Conference Center Bryant Park, New York City.",
+    category: Category.Media,
+    link: "https://summit.ai",
+    imageUrl: "https://summit.ai/og-odsc-ai-nyc.png",
+    badge: "Talk",
+    date: "2026-12-02"
+  },
   {
     id: 'media-odsc-west-2026',
     title: "Build Your Own Self-Improving Agent with OpenClaw and MLflow",
