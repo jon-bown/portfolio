@@ -127,6 +127,17 @@ export const PROJECTS: Project[] = [
     date: "2026-10-27"
   },
   {
+    id: 'media-ai-for-work-summit-2026',
+    title: "Multiply Your Coding Agents: A Hands-On Introduction to Omnigent and Git Worktrees",
+    description: "Speaker - AI for Work Summit by ODSC, New York City.",
+    category: Category.Media,
+    link: "https://summit.ai",
+    imageUrl: "./images/ai-for-work-summit-2026.png",
+    imagePosition: "18% 50%",
+    badge: "Speaker",
+    date: "2026-12-02"
+  },
+  {
     id: 'media-podcast-odsc-aix',
     title: "Building Self-Improving AI Agents",
     description: "Guest - ODSC's Ai X Podcast",
